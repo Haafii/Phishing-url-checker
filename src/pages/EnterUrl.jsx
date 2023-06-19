@@ -80,7 +80,7 @@ function EnterUrl() {
         <AnimatePresence>
           {isClicked && (
             <motion.div
-              className="w-3/4 flex flex-grow h-6 mt-4 flex-col gap-2 bg-gray-300 shadow-2xl"
+              className="w-3/4 flex flex-grow h-6 mt-4 flex-col gap-2 md:bg-gray-300 md:shadow-2xl"
               initial="hidden"
               animate="visible"
               exit="hidden"
