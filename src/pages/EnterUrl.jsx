@@ -60,13 +60,13 @@ function EnterUrl() {
       }}
     >
       <motion.div
-        className="w-full p-6 items-center flex flex-col"
+        className="flex flex-col items-center w-full p-6"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
         <motion.h1
-          className="text-2xl font-semibold mb-6"
+          className="mb-6 text-2xl font-semibold"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0, transition: { delay: 0.3 } }}
         >
@@ -75,14 +75,14 @@ function EnterUrl() {
         <motion.input
           type="text"
           placeholder="Enter URL"
-          className="w-1/2 px-4 py-2 rounded-lg border-2 border-purple-400 mb-4 focus:outline-none focus:ring-2 focus:ring-purple-400"
+          className="w-1/2 px-4 py-2 mb-4 border-2 border-purple-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
           value={url}
           onChange={handleInputChange}
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0, transition: { delay: 0.4 } }}
         />
         <motion.button
-          className="w-1/6 bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+          className="w-1/6 py-2 font-semibold text-white bg-purple-500 rounded-lg hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-400"
           onClick={handleButtonClick}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { delay: 0.5 } }}
@@ -91,7 +91,7 @@ function EnterUrl() {
         </motion.button>
         {isClicked && (
           <motion.div
-            className="w-3/4 flex flex-grow h-6 mt-4 flex-col gap-2 md:bg-gray-300 md:shadow-2xl"
+            className="flex flex-col flex-grow w-3/4 h-6 gap-2 mt-4 md:bg-gray-300 md:shadow-2xl"
             initial="hidden"
             animate="visible"
             variants={resultVariants}
@@ -101,7 +101,7 @@ function EnterUrl() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0, transition: { delay: 0.3 } }}
             >
-              <motion.h1 className="text-gray-700 font-bold">{`Url: ${url}`}</motion.h1>
+              <motion.h1 className="font-bold text-gray-700">{`Url: ${url}`}</motion.h1>
               <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 0.4 } }}>
                 Details
               </motion.p>
