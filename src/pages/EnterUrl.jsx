@@ -91,7 +91,7 @@ function EnterUrl() {
         </motion.button>
         {isClicked && (
           <motion.div
-            className="flex flex-col flex-grow w-3/4 h-6 gap-2 mt-4 md:bg-gray-300 md:shadow-2xl"
+            className="flex flex-col flex-grow items-center justify-center w-3/4 h-6 gap-2 mt-4 md:bg-gray-300 md:shadow-2xl"
             initial="hidden"
             animate="visible"
             variants={resultVariants}
@@ -101,10 +101,7 @@ function EnterUrl() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0, transition: { delay: 0.3 } }}
             >
-              <motion.h1 className="font-bold text-gray-700">{`Url: ${url}`}</motion.h1>
-              <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 0.4 } }}>
-                Details
-              </motion.p>
+              <motion.h1 className="font-bold text-6xl text-gray-700">{}Phishing</motion.h1>
             </motion.div>
           </motion.div>
         )}
